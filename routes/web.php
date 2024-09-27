@@ -61,3 +61,15 @@ Route::get('user/{user}', function (\App\Models\User $user) {
 Route::get('user/{user:email}', function (\App\Models\User $user) {
     return $user;
 });
+
+Route::get('/request', function (\Illuminate\Http\Request $request){
+    dd($request->all());
+    //dd($request->input('sobrenome'));
+    //dd($request->query('nome'));
+    //dd($request->url());
+    //dd($request->fullUrl());
+    //dd($request->has('nome'));
+    //dd($request->whenHas('nome', function(){return 'oi'; }));
+    //dd($request->whenFilled('nome',function($xuxa){ return $xuxa; }));
+    //dd($request->ip());
+});
